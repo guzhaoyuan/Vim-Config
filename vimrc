@@ -1,8 +1,13 @@
+execute pathogen#infect()
+
 "去掉有关vi一致性模式，避免以前版本的一些bug和局限
 set nocompatible
 
 "使删除键能够跨行删除
 set backspace=2
+
+"光标在窗口上下边界时距离边界7行即开始滚屏
+set so=7
 
 "显示行号
 set number
@@ -32,6 +37,9 @@ set modeline
 "高亮行列
 set cursorline
 set cursorcolumn
+"取消默认下划线，并且将CursorLine背景色改为浅白色
+hi CursorLine cterm=none
+highlight CursorLine ctermbg=240
 
 " 继承前一行的缩进方式，特别适用于多行注释
 set autoindent
@@ -61,5 +69,5 @@ set showmatch
 set nobackup
 set nowritebackup
 
-"在insert模式下能用删除键进行删除
-set backspace=indent,eol,start
+"显示文件路径
+set statusline+=%F
