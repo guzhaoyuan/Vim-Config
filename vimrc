@@ -71,3 +71,18 @@ set nowritebackup
 
 "显示文件路径
 set statusline+=%F
+
+"setting ctrlP
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+"auto open nerdtree on starting vim
+autocmd vimenter * NERDTree
+" Go to previous (last accessed) window
+autocmd VimEnter * wincmd p
+"open a NERDTree automatically when vim starts up if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"open NERDTree with Ctrl+n
+map <C-n> :NERDTreeToggle<CR>
+"close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
