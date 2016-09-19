@@ -17,6 +17,8 @@ fi
 cp -r .vim ~/
 cp .vimrc ~/
 
+#check Python headers installed
+sudo apt-get install python-dev
 #install YouCompleteMe
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py
