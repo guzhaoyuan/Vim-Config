@@ -17,11 +17,17 @@ fi
 cp -r .vim ~/
 cp .vimrc ~/
 
-#check Python headers installed
-sudo apt-get install python-dev
-#install YouCompleteMe
-cd ~/.vim/bundle/YouCompleteMe
-./install.py
+read -r -p "Do you want to install YouCompleteMe(may fail)? [y/N] " response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]
+then
+	#check Cmake installed
+	sudo apt-get install cmake
+	#check Python headers installed
+	sudo apt-get install python-dev
+	#install YouCompleteMe
+	cd ~/.vim/bundle/YouCompleteMe
+	./install.py
+fi
 
 #finish
 echo "install complete"
