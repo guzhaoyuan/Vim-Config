@@ -13,10 +13,13 @@ then
 	echo ".vimrc exists, backup .vimrc to .vimrc_backup"
 fi
 
-
 #copy file to home directory
 cp -r .vim ~/
 cp .vimrc ~/
+
+#install YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe
+./install.py
 
 #finish
 echo "install complete"
