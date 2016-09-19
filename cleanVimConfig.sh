@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo rm -r .vim
-rm .vimrc
+sudo rm -r ~/.vim
+rm ~/.vimrc
