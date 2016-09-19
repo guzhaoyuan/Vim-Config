@@ -27,6 +27,8 @@ then
 	#install YouCompleteMe
 	cd ~/.vim/bundle/YouCompleteMe
 	./install.py
+else
+	rm -r ~/.vim/bundle/YouCompleteMe
 fi
 
 #finish
