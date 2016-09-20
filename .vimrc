@@ -28,8 +28,17 @@ set wrap
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
-"使能鼠标选中
-set mouse=a
+"鼠标支持
+if has('mouse')
+    set mouse=a
+    "set selection=exclusive
+    set selectmode=mouse,key
+    set nomousehide
+endif
+
+" 在搜索的时候忽略大小写
+set smartcase
+set ignorecase
 
 "set pastetoggle=<F2>
 
@@ -38,8 +47,10 @@ set modeline
 set cursorline
 set cursorcolumn
 "取消默认下划线，并且将CursorLine背景色改为浅白色
-hi CursorLine cterm=none
-highlight CursorLine ctermbg=240
+"hi CursorLine cterm=none
+"highlight CursorLine ctermbg=240
+set cursorline
+set cursorcolumn
 
 " 继承前一行的缩进方式，特别适用于多行注释
 set autoindent

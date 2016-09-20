@@ -12,6 +12,6 @@ My Vim config
 - [ ] Color config
 - [x] pwd
 - [x] YouCompleteMe: autocomplete support for C/C++
-- [ ] Syntastic: syntax checking
-- [ ] Git-gutter: git support
+- [x] Syntastic: syntax checking
+- [x] Git-gutter: git support
 - [ ] clewn:debug support 
