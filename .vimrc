@@ -40,7 +40,8 @@ endif
 set smartcase
 set ignorecase
 
-"set pastetoggle=<F2>
+"粘贴的时候启动粘贴模式，防止换行爆炸
+set pastetoggle=<F10>
 
 set modeline
 "高亮行列
