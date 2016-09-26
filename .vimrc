@@ -39,6 +39,8 @@ endif
 " 在搜索的时候忽略大小写
 set smartcase
 set ignorecase
+" 高亮搜索结果
+set hlsearch
 
 "粘贴的时候启动粘贴模式，防止换行爆炸
 set pastetoggle=<F10>
