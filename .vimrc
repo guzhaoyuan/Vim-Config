@@ -45,6 +45,9 @@ set hlsearch
 "粘贴的时候启动粘贴模式，防止换行爆炸
 set pastetoggle=<F10>
 
+"使用系统剪切板，支持不同窗口间粘贴
+set clipboard=unnamed
+
 set modeline
 "高亮行列
 set cursorline
